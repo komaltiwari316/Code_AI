@@ -1,0 +1,9 @@
+1. navbar - 1. logo ur name 
+            2. code ai
+            3. contact us / help
+            4. login 
+2. left side bar - 1. html , css and javasricpt code 
+                   2. backend
+                   3. code bug detector
+                   4. code review
+3. right side - area where all ai works are done.

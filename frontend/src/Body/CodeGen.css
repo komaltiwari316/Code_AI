@@ -1,0 +1,92 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  gap: 20px; 
+  padding: 20px;
+  background-color: hsl(0, 0%, 96%); 
+  height: 86vh;
+}
+
+.left {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column; /* textarea + button vertically */
+  gap: 15px;              /* gap between textarea and button */
+}
+
+.left textarea {
+  flex: 1;                 /* occupy max available height */
+  width: 100%;             /* full width */
+  background: #121212;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  resize: none;
+  font-size: 14px;
+}
+
+.right {
+  flex: 2;
+  background-color: #060505;
+  color: #0e0c0c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%; /* occupy full container height */
+  overflow: hidden;
+}
+
+.left button {
+  background-color: #01090c;   
+  color: white;               
+  padding: 10px 20px;        
+  border: none;              
+  border-radius: 6px;          
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;   
+}
+
+.left button:hover {
+  background-color: #058c98;  
+  transform: scale(1.05);     
+}
+
+.left button:active {
+  background-color: #059295;   
+  transform: scale(0.95);      
+}
+
+.code-block {
+  background-color: #1e1e1e; /* slightly lighter than parent */
+  color: #f3f3f3;            /* light text */
+  padding: 15px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: auto;
+  height: 300vh;           /* half of right div for code */
+  white-space: pre-wrap;     /* wrap long lines */
+  word-wrap: break-word;
+  margin-top: -60px;
+  margin-bottom: -20px;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+

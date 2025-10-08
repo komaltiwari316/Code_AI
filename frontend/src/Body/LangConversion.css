@@ -1,0 +1,96 @@
+/* LangConversion.css */
+
+/* Full-page reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Fira Code", monospace;
+}
+
+/* Main container for left (input) and right (output) */
+.lang-conversion-container {
+  display: flex;
+  gap: 20px; 
+  padding: 20px;
+  background-color: hsl(0, 0%, 96%);
+  height: 86vh;
+}
+
+/* Left side: textarea + button */
+.left {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left textarea {
+  flex: 1;
+  width: 100%;
+  background: #121212;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  resize: none;
+  font-size: 14px;
+}
+
+.left button {
+  background-color: #01090c;   
+  color: white;               
+  padding: 10px 20px;        
+  border: none;              
+  border-radius: 6px;          
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;   
+}
+
+.left button:hover {
+  background-color: #058c98;  
+  transform: scale(1.05);     
+}
+
+.left button:active {
+  background-color: #059295;   
+  transform: scale(0.95);      
+}
+
+/* Right side: output area */
+.right {
+  flex: 2;
+  background-color: #060505;
+  color: #0e0c0c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lang-conversion-output {
+  flex: 1;
+  overflow: auto;
+}
+
+.code-block {
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+  padding: 15px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
