@@ -46,7 +46,7 @@ router.post('/ask-ai', async (req, res) => {
 function buildPrompt(task, userPrompt) {
   switch (task) {
     case "codegen":
-      return `Generate a complete working website (HTML + CSS + JS if needed) for: ${userPrompt}.
+      return `Generate a complete code for: ${userPrompt}.
       Return code only inside a single code block. No explanation.`;
     case "websitecodegen":
       return `Generate a complete working website (HTML + CSS + JS if needed) for: ${userPrompt}. Use placeholder images like https://picsum.photos/400 (do not use Amazon links). Return code only inside a single code block. No explanation.`;

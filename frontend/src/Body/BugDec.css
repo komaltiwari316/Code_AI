@@ -52,8 +52,7 @@ html, body {
 
 .right {
   flex: 2;
-  background-color: #070606;
-  color: #ebe1e1;
+  color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -72,7 +71,7 @@ html, body {
 }
 
 .right::-webkit-scrollbar-track {
-  background: #121212;
+  background: #050505;
   border-radius: 4px;
 }
 
