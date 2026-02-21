@@ -14,7 +14,7 @@ const Website = () => {
     if (!prompt) return alert('Enter a prompt!');
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/ai/ask-ai', {
+      const response = await axios.post('https://code-ai-backend-n8lb.onrender.com/ai/ask-ai', {
         task: 'websitecodegen',
         prompt
       });
@@ -50,7 +50,7 @@ const Website = () => {
   const handleDownload = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:5000/ai/download-website',
+        'https://code-ai-backend-n8lb.onrender.com/ai/download-website',
         { html, css, js },
         { responseType: 'blob' }
       );
@@ -75,9 +75,6 @@ const Website = () => {
           placeholder="Describe the website you want..."
         />
         <button onClick={handleGenerate}>{loading ? 'Generating...' : 'Generate Website'}</button>
-        {/* <textarea value={html} onChange={(e) => setHtml(e.target.value)} placeholder="HTML output" />
-        <textarea value={css} onChange={(e) => setCss(e.target.value)} placeholder="CSS output" />
-        <textarea value={js} onChange={(e) => setJs(e.target.value)} placeholder="JS output" /> */}
         <div className="code-area">
           <label>HTML</label>
           <textarea value={html} onChange={(e) => setHtml(e.target.value)} />

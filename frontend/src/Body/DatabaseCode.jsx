@@ -4,25 +4,25 @@ import { useState } from 'react';
 import './DataBaseCode.css'
 
 const DatabaseCode = () => {
-   const [input ,setinput]=useState("");
-  const [output,setoutput]=useState("");
+  const [input, setinput] = useState("");
+  const [output, setoutput] = useState("");
 
-  const handledatabase=async()=>{
-    try{
-      const res=await axios.post('http://localhost:5000/ai/ask-ai',{
-        task:"databasecode",
-        prompt:input
+  const handledatabase = async () => {
+    try {
+      const res = await axios.post('https://code-ai-backend-n8lb.onrender.com/ai/ask-ai', {
+        task: "databasecode",
+        prompt: input
       })
       setoutput(res.data.result);
     }
-    catch(err){
+    catch (err) {
       console.log(err)
     }
   }
   return (
     <div className="lang-conversion-container">
       <div className="left">
-        <textarea placeholder="Enter Your data..." value={input} onChange={(e)=>setinput(e.target.value)}/>
+        <textarea placeholder="Enter Your data..." value={input} onChange={(e) => setinput(e.target.value)} />
         <button onClick={handledatabase}>Database</button>
       </div>
       <div className="right">

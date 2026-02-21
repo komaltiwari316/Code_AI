@@ -8,7 +8,7 @@ const CodeGen = () => {
 
   const HandleGenerationCode = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/ai/ask-ai', {
+      const res = await axios.post('https://code-ai-backend-n8lb.onrender.com/ai/ask-ai', {
         task: "codegen",
         prompt: input
       });
@@ -19,7 +19,7 @@ const CodeGen = () => {
     }
   };
 
-  const HandleReset=()=>{
+  const HandleReset = () => {
     setInput("")
     setOutput("")
   }

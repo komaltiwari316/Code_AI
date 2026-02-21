@@ -18,7 +18,7 @@ const Resume = () => {
 
     try {
       setLoading(true);
-      const { data } = await axios.post('http://localhost:5000/ai/upload', formData, {
+      const { data } = await axios.post('https://code-ai-backend-n8lb.onrender.com/ai/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setAnalysis(data.result);
