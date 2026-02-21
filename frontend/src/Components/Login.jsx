@@ -1,22 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Login.css'
+import "./Login.css"
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-  const [email,setemail]=useState("");
-  const [password,setpassword]=useState("");
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
   const navigate = useNavigate();
 
-  const HandleLogin=async(e)=>{
+  const HandleLogin = async (e) => {
     e.preventDefault();
-    try{
-      const res=await axios.post("https://code-ai-backend-n8lb.onrender.com/User/login",{
+    try {
+      const res = await axios.post("https://code-ai-backend-n8lb.onrender.com/User/login", {
         email,
         password
-      });  
+      });
       alert("login successfully");
       localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate('/code-generation');
@@ -35,7 +35,7 @@ const Login = () => {
             type="email"
             name="email"
             value={email}
-            onChange={(e)=>setemail(e.target.value)}
+            onChange={(e) => setemail(e.target.value)}
             placeholder="Enter your email"
             required
           />
@@ -47,7 +47,7 @@ const Login = () => {
             type="password"
             name="password"
             value={password}
-            onChange={(e)=>setpassword(e.target.value)}
+            onChange={(e) => setpassword(e.target.value)}
             placeholder="Enter your password"
             required
           />
