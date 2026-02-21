@@ -13,7 +13,7 @@ const Login = () => {
   const HandleLogin=async(e)=>{
     e.preventDefault();
     try{
-      const res=await axios.post('http://localhost:5000/User/login',{
+      const res=await axios.post("https://code-ai-backend-n8lb.onrender.com/User/login",{
         email,
         password
       });  
