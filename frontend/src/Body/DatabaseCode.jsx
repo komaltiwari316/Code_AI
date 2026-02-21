@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
-import './DatabaseCode.css'
+import './DataBaseCode.css'
 
 const DatabaseCode = () => {
    const [input ,setinput]=useState("");
